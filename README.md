@@ -23,6 +23,7 @@ BusBladi is a web application developed for a Moroccan transport company, design
   - [Schedules & Stops Page](#schedules--stops-page)
   - [Profile Page](#profile-page)
   - [Forgot Password Page](#forgot-password-page)
+  - [Scanner Page](#scanner-page)
 - [Demo Video](#demo-video)
 - [Contributing](#contributing)
 - [License](#license)
@@ -107,29 +108,57 @@ The application requires the following environment variables, defined in the `.e
 
 The **Signup Page** (`/signup/`) allows new users to create an account. Users need to provide their first name, last name, email, phone number, and password. Upon successful registration, a verification email is sent to the user's email address.
 
+<img width="2560" alt="Screen Shot 2024-08-12 at 4 29 57 PM" src="https://github.com/user-attachments/assets/c50066c1-7915-46e5-92d2-692bae4af77a">
+
+
 ### Login Page
 
 The **Login Page** (`/login/`) is where users can log in to their account using their email and password. If the account is not activated, the user will be prompted to check their email for a verification link.
+
+<img width="2560" alt="Screen Shot 2024-08-12 at 4 29 43 PM" src="https://github.com/user-attachments/assets/018bcfa0-0bd9-4882-863c-239f5000eab7">
+
 
 ### Home Page
 
 The **Home Page** (`/home/`) displays the user's information, including their balance and the number of tickets they have. If the user has tickets, a QR code is generated for their first ticket.
 
+<img width="2560" alt="Screen Shot 2024-08-12 at 4 31 42 PM" src="https://github.com/user-attachments/assets/a3974cd7-e937-4a92-aa41-9c99e87053fc">
+
+
 ### Buy Tickets Page
 
 The **Buy Tickets Page** (`/buy-tickets/`) allows users to purchase bus tickets. Users can select the number of tickets and view the total cost before confirming their purchase. The page also updates the user's balance and ticket count after a successful transaction.
+
+<img width="2560" alt="Screen Shot 2024-08-12 at 4 31 52 PM" src="https://github.com/user-attachments/assets/ba557572-6fa8-4994-87e7-95734a00d92d">
+
 
 ### Schedules & Stops Page
 
 The **Schedules & Stops Page** (`/Schedules_Stops/`) provides information about bus routes, including the first and last stops. Users can select a city and bus route to view detailed schedule information.
 
+<img width="2560" alt="Screen Shot 2024-08-12 at 4 32 08 PM" src="https://github.com/user-attachments/assets/35f0d9d6-453e-4607-aa2e-946b87ee1b38">
+
+
 ### Profile Page
 
 The **Profile Page** (`/profile/`) displays the user's profile information, including their phone number, email, first and last name, ticket count, balance, and avatar. Users can view and manage their account details from this page.
 
+<img width="2560" alt="Screen Shot 2024-08-12 at 5 05 28 PM" src="https://github.com/user-attachments/assets/0440baa5-c747-441a-9645-27c7e78e3aac">
+
+
 ### Forgot Password Page
 
 The **Forgot Password Page** (`/forgot-password/`) allows users to reset their password if they have forgotten it. Users need to provide their email address to receive a password reset link. Upon receiving the email, users can follow the instructions to set a new password and regain access to their account.
+
+<img width="2560" alt="Screen Shot 2024-08-12 at 4 30 09 PM" src="https://github.com/user-attachments/assets/894b4b15-ae2f-4043-8568-744a2065cbf0">
+
+### Scanner Page
+
+The **Scanner Page** (`/scanner/`) allows users to reset their password if they have forgotten it. Users need to provide their email address to receive a password reset link. Upon receiving the email, users can follow the instructions to set a new password and regain access to their account.
+
+<img width="2560" alt="Screen Shot 2024-08-12 at 4 59 47 PM" src="https://github.com/user-attachments/assets/62a25b94-63ea-4142-8bf9-386a53733650">
+
+
 
 ## Demo Video
 
