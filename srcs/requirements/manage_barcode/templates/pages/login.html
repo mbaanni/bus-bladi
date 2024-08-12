@@ -1,0 +1,48 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block header_content %}
+		<title>login</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel='icon' href="{% static 'auth/images/logo_mini.png' %}">
+		<link rel="stylesheet" href="{% static '/css/login.css' %}">
+		<script src="{% static '/js/password.js' %}"></script>
+{% endblock header_content %}
+{% block body_content %}
+	<div class="login-data0">
+		<h1 class='header1'>Login</h1>
+		{% for error in errors %}
+			<script> 
+				createToast('error', "{{error}}")
+			</script>
+		{% endfor %}
+		{% if success %}
+        	<script> 
+        	    createToast('success', "{{success}}")
+        	</script>
+    	{%endif%}
+		<form action="/" method="POST" id="motlform">
+			{% csrf_token %}
+			<div class="form1">
+				<div class="l3inin">
+					<i class="bi bi-envelope-at"></i>
+					<input type="email" placeholder="Email" name="email" id="email" required>
+				</div>
+				<div class='l3inin'>
+					<i onclick='show_password()' class="bi bi-eye" id='logo-eyes'></i>
+					<input type="password" placeholder="password" name="password" id="password" required />
+				</div>
+				
+				{% if account_disabled %}
+					<a class='verifie_button' href='/resend_email/'>Resend email verification ?</a>
+				{% endif %}
+				<a href='/reset_password/' class='f-pass'>Forgot password?</a>
+				<div class="signs">
+					<a href='/signup/'class='signref'><button type="button" value="sign up" id="signup">sign_up</button></a>
+					<button type="submit" value="sign in" id="signin">sign_in</button>
+				</div>
+			</div>
+		</form>
+	</div>
+{% endblock body_content %}

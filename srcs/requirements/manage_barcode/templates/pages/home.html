@@ -1,0 +1,22 @@
+{% extends 'base/base_1.html' %}
+{% load static %}
+{% block header_content %}
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+{% endblock header_content %}
+{% block body_content %}
+<div class="infos">
+    <span class="fname infos-span">{{ db_user.fname }} {{ db_user.lname }}</span>
+    <span class="infos-span">Tickets: <span class="tickets">{{ count_ticket }}</span></span>
+    <span class="infos-span">Wallet: <span class="budget">{{ db_user.balance }}Dh</span></span>
+</div>
+<div class="card">
+    <img class="card-img-top" src="{% static 'barcodes/' %}{% if count_ticket == 0 %}unavailable_ticket.png{% else %}{{ db_user.email }}.png{% endif %}" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <p class="card-text">Don't have ticket ? <a href="/buy-tickets/" class="buyticket">Buy one</a></p>
+      <div class="icon_if_disable"></div>
+      <a href="#" class="btn btn-primary {% if count_ticket == 0 %}disabled{% endif %}" onclick="check_if_disable(this)">Activate barcode</a>
+    </div>
+  </div>
+<script src="{% static '/js/home.js'%}"></script>
+{% endblock body_content %}

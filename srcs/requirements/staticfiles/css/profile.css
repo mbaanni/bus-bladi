@@ -1,0 +1,249 @@
+h1
+{
+    color: #ef552d;
+    margin: auto;
+    font-family: monospace;
+    font-size:xx-large;
+    padding-top: 1.5rem;
+
+}
+
+.box_data
+{
+    padding: 2%;
+    height: 100%;
+
+    font-family: monospace;
+    background-color: #282a37b1;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    margin: auto;
+    margin-top: 4rem;
+    border: 2px solid #ef552d;
+    border-radius: 15px;
+}
+
+/* ***************** */
+.photo_info
+{
+    margin: 0;
+}
+.photo_container
+{
+    display: flex;
+    gap: 20px;
+}
+.photo_button
+{
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+#avatar_photo
+{
+    border-radius: 50%;
+    width: 11rem;
+    height: 11rem;
+    object-fit: cover;
+}
+#Choose_button
+{
+    color: white;
+    background-color: #ef552d;
+    border: 2px solid #ef552d;
+    border-radius: 8px;
+}
+#Choose_button:hover
+{
+    box-shadow: 0 0 10px #EF552D;
+    color: black;
+}
+
+#choose_paragraph
+{
+    padding-top: 1.1rem;
+    margin: 0;
+}
+#file-upload
+{
+    display: none;
+}
+.bi-shadows:hover
+{
+    color: #EF552D;
+}
+/********************************/
+.account_info
+{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin: 0;
+}
+/********************************/
+.password_info
+{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+/* shared******************* */
+
+#input_button
+{
+    width: 300px;
+    padding: 10px;
+    border-radius: 15px;
+    float: right;
+    border: 0px ;
+}
+.save_button
+{
+    margin: auto;
+    margin-top: -10px;
+    width: 100%;
+    padding-bottom: 0;
+}
+
+#delete
+{
+    color: white;
+    width: 100%;
+    background-color: #ef552d;
+    border: 2px solid #ef552d;
+    border-radius: 8px;
+    padding: 5px;
+    margin-top: 10px;
+
+}
+#delete:hover
+{
+    box-shadow: 0 0 10px #EF552D;
+    color: black;
+}
+#save
+{
+    color: white;
+
+    width: 150px;
+    padding: 10px;
+    background-color: #ef552d;
+    border: 2px solid #ef552d;
+    border-radius: 8px;
+    float: right;
+    min-width: 100px;
+}
+#save:hover
+{
+    box-shadow: 0 0 10px #EF552D;
+    color: black;
+}
+#edit
+{
+    color: white;
+    width: 150px;
+    padding: 10px;
+    background-color: #ef552d;
+    border: 2px solid #ef552d;
+    border-radius: 8px;
+    float: left;
+    min-width: 100px;
+}
+#edit:hover
+{
+    box-shadow: 0 0 10px #EF552D;
+    color: black;
+}
+label
+{
+    position: relative;
+    padding-top: 0.5rem;
+    margin: auto;
+}
+
+/* @media (max-width: 991px)
+{
+
+    .box_data
+    {
+        width: 100%;
+        min-width: 0;
+        gap:30px
+    }
+
+    #input_button
+    {
+        max-width: 300px;
+        width: 80%;
+    }
+    
+
+
+} */
+@media (max-width: 1299px)
+{
+    .photo_container
+    {
+
+    }
+    .box_data
+    {
+        margin: 0;
+        padding: 5%;
+        width: 100%;
+        min-width: 0;
+        gap:30px
+    }
+    #input_button
+    {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .data-account
+    {
+        width: 100%;
+    }
+    .account_info
+    {
+        gap: 0px;
+    }
+    .data-account
+	{
+		display: flex;
+        flex-direction: column;
+        width: fit-content;
+        width: 80%;
+        margin: auto;
+        position: static;
+	}
+    .save_button
+    {
+        width: 80%;
+    }
+    #avatar_photo
+    {
+        width: 35%;
+        height: 35%;
+        min-width: 80px;
+        min-height: 80px;
+        max-width: 150px;
+        max-height: 150px;
+        margin: auto;
+    }
+    h1
+    {
+        display: none;
+    }
+    #edit,#save
+    {
+        color: white;
+        width: auto;
+        padding: 10px;
+        background-color: #ef552d;
+        border: 2px solid #ef552d;
+        border-radius: 8px;
+    }
+}

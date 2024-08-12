@@ -1,0 +1,63 @@
+{% extends 'base/base_1.html' %}
+{% load static %}
+{% block header_content %}
+    <title>Profile</title>
+    <link rel='stylesheet' href="{% static '/css/profile.css' %}">
+{% endblock header_content %}
+{% block body_content %}
+    <form method="post" class="box_data" action="/update_data/" enctype='multipart/form-data'>
+      {% csrf_token %}
+        <h1>EDIT INFORMATION</h1>
+        <div class="photo_info">
+            <div class="photo_container">
+                <img src="{{ profile.avatar }}" id="avatar_photo" >
+                <div class="photo_button">
+                    <button onclick="reclick()" id="Choose_button" type="button" name="avatares">Choose a file</button>
+                    <input type="file" id="file-upload" name="photo">
+                    <p id="choose_paragraph">Acceptable formats jpg,png only</p>
+                </div>
+            </div>
+        </div>
+        <div class="account_info">
+            <h1>ACCOUNT INFORMATION</h1>
+            <div class="data-account">
+                <label for="first_name" class="text">First Name</label>
+                <input type="text" name="first_name" id="input_button" value="{{ profile.fname }}" disabled="true">
+            </div>
+            <div class="data-account">
+                <label for="last_name" class="text">Last Name</label>
+                <input type="text" name="last_name" id="input_button" value="{{ profile.lname }}" disabled="true">
+            </div>
+            <div class="data-account">
+                <label for="email" class="text">E-mail</label>
+                <input type="email" name="email" id="input_button" value="{{ profile.email }}" disabled="true">
+            </div>
+        </div>
+        <div class="password_info">
+            <h1>CHANGE PASSWORD</h1>
+            <div class="data-account">
+                <label for="pas">Current Password</label>
+                <input type="password" name="pas" id="input_button" placeholder="Current Password"  disabled="true">
+            </div>
+            <div class="data-account">
+                <label for="npas">New Password</label>
+                <input type="password" name="npas" id="input_button" placeholder="New Password" disabled="true">
+            </div>
+            <div class="data-account">
+                <label for="cpas">Confirm Password</label>
+                <input type="password" name="cpas" id="input_button" placeholder="Confirm Password" disabled="true">
+            </div>
+            <div class="save_button">
+                <button id="edit" type="button" onclick="edit_data()">edit</button>
+                <button type="submit" id="save" name="save_all" value="save_all">save</button>
+                <button type="button" id="delete" onclick="delete_account()">delete-account</button>
+            </div>
+        </div>
+    </form>
+    {% for error in errors %}
+			<script> 
+				createToast('error', "{{error}}")
+			</script>
+	{% endfor %}
+    <script src="{% static '/js/profile.js' %}"></script>
+{% endblock body_content %}
