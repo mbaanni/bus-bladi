@@ -71,6 +71,9 @@ MONGO_DB_URI='your-mongo-db-uri'
 MONGO_DB_NAME='your-db-name'
 MONGO_DB_USERNAME='your-username'
 MONGO_DB_PASSWORD='your-password'
+EMAIL_HOST='your-smtp-server'
+EMAIL_HOST_USER='your-smtp-email'
+EMAIL_HOST_PASSWORD='your-smtp-password'
 ```
 ### Build and Run the Docker Containers
 
