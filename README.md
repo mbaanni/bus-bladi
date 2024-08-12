@@ -71,6 +71,9 @@ MONGO_DB_URI='your-mongo-db-uri'
 MONGO_DB_NAME='your-db-name'
 MONGO_DB_USERNAME='your-username'
 MONGO_DB_PASSWORD='your-password'
+EMAIL_HOST='your-smtp-server'
+EMAIL_HOST_USER='your-smtp-email'
+EMAIL_HOST_PASSWORD='your-smtp-password'
 ```
 ### Build and Run the Docker Containers
 
@@ -92,6 +95,9 @@ The application requires the following environment variables, defined in the `.e
 - `MONGO_DB_NAME`: Name of your MongoDB database
 - `MONGO_DB_USERNAME`: Username for MongoDB authentication
 - `MONGO_DB_PASSWORD`: Password for MongoDB authentication
+- `EMAIL_HOST`: SMTP server to use to send mail example: "smtp.gmail.com"
+- `EMAIL_HOST_USER`: The email used for sending confirmation msg
+- `EMAIL_HOST_PASSWORD`:The password given by the smtp server
 
 ## Usage
 
