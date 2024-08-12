@@ -12,8 +12,12 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+
+load_dotenv('../../.env')
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -36,7 +40,7 @@ DEBUG = True
 CORS_ALLOW_CREDENTIALS = True
 
 DOMAIN = "busbladi-h0csh2bgcdg9bvcq.eastus-01.azurewebsites.net"
-ALLOWED_HOSTS = [DOMAIN] 
+ALLOWED_HOSTS = [DOMAIN, '0.0.0.0'] 
 CSRF_TRUSTED_ORIGINS = [f'https://{DOMAIN}', f'http://{DOMAIN}'] 
 CORS_ORIGIN_WHITELIST = [f'https://{DOMAIN}',f'http://{DOMAIN}']
 
@@ -146,19 +150,15 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+# USE_X_FORWARDED_HOST = True
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-
-USE_X_FORWARDED_HOST = True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+# SECURE_SSL_REDIRECT = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
